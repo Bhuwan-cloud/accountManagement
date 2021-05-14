@@ -1,0 +1,93 @@
+
+/* navbar -------------*/
+
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar
+{
+    background-color: black;
+}
+.navbar .brand-navbar img:hover
+{
+    opacity: 0.7;
+  
+   
+}
+.navbar ul
+{
+padding: 0px 30px 0px 0px;
+}
+.navbar ul li a{
+    color: white;
+    margin: 10px 0px 0px 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.navbar ul li a .fas{
+    padding-right:5px; 
+    padding-left:5px; 
+}
+.navbar ul li a:hover{
+    color: #15b000;
+    border-left: 3px solid #a367a8;
+    border-radius: 40px;
+}
+.navbar ul li.active > a {
+    color: #15b000;
+    font-weight: bold;
+    font-size: 12px;
+    border-left: 3px solid #15b000;
+    border-radius: 40px;
+}
+.iconStyle
+{
+    color: #15b000;
+}
+
+
+/* side bar --------------------------*/
+.sidebar1 {
+    background: #96cbd6;
+  
+    padding: 0px;                               
+    min-height: 100%;
+    
+}
+
+.logo>img {
+    margin-top: 10px;
+    padding: 3px;
+    border: 3px solid rgb(114, 85, 85);
+    border-radius: 50%;
+   height: 80px;
+   width: 80px;
+   margin-left: 2em;
+}
+.list {
+    color: rgb(17, 14, 14);
+    list-style: none;
+    padding-left: 0px;
+}
+.list::first-line {
+    color: rgba(19, 17, 17, 0.5);
+}
+.list> li, h5 {
+    padding: 5px 0px 5px 40px;
+}
+.list>li:hover {
+    background-color: rgba(129, 87, 87, 0.2);
+    border-left: 5px solid white;
+    color: rgb(46, 40, 40);
+    font-weight: bolder;
+    padding-left: 35px;
+}.main-content{
+text-align:center;
+}
+   
+
+
+
+
+

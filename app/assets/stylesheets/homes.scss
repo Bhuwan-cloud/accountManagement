@@ -1,43 +1,30 @@
-// Place all the styles related to the Homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-body{
-    background-color: #25274d;
+.firstpage {
+    background-color: rgb(201, 245, 245);
 }
-.contact{
-    padding: 4%;
-    height: 400px;
+img {
+    border-radius: 30%;
+    margin-top: 3em;
 }
-.col-md-3{
-    background: #ff9b00;
-    padding: 4%;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+
+/* form for user firstpage */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #17a2b8;
+  height: 100vh;
 }
-.contact-info{
-    margin-top:10%;
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+
+  height: 320px;
+ 
+  border: 2px solid #9C9C9C;
+  background-color: #eaeaeab2;
 }
-.contact-info img{
-    margin-bottom: 15%;
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
 }
-.contact-info h2{
-    margin-bottom: 10%;
-}
-.col-md-9{
-    background: #fff;
-    padding: 3%;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-}
-.contact-form label{
-    font-weight:600;
-}
-.contact-form button{
-    background: #25274d;
-    color: #fff;
-    font-weight: 600;
-    width: 25%;
-}
-.contact-form button:focus{
-    box-shadow:none;
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
 }

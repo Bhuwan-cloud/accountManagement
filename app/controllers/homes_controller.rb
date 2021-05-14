@@ -1,4 +1,13 @@
 class HomesController < ApplicationController
+  
   def index
-  end
+    @home= Home.all 
+  end 
+ 
+  
+  def new
+    @home= Home.new
+  end 
+  
+ 
 end
