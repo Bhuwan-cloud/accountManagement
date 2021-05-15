@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="col-md-6 my-3 text-center float-end">
+    <%= link_to homepages_path do %>
+      <div class="btn btn-primary btn-lg btn-block btn-huge">Enter to Accounty</div>
+      <% end %>
+
+    <img
+              src="https://static3.depositphotos.com/1007836/260/i/950/depositphotos_2609396-stock-photo-business-finance-chart-graph-diagram.jpg"
+              alt="logo" width="400" height="400">
+  </div>
+            
+  <div class="row">
+    <%= link_to homepages_path do %>
+          <img src="https://www.designevo.com/res/templates/thumb_small/blue-triangle-and-white-arrow.png" alt="logo"
+            width="150" height="150" class="mt-0">
+          <% end %>
+    
+    <div class="login pull-left">
+
+        <h2>Heading out? Stay connected...</h2>
+        <p>Visit <strong>Accounty</strong> on your mobile phone.</p>
+    </div>
+    <div class="register pull-left">
+      <div class="header">
+        <h2>Sign In</h2>
+        <span>Access your account.</span>
+      </div>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email %><br />
+            <%= f.email_field :email, placeholder:'johndoe@example.com', autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+          </div>
+          <% end %>
+
+            <div class="actions">
+              <%= f.submit "Log in", class: "btn btn-primary" %>
+              <input type="reset", class="btn btn-primary", value="Reset">
+            </div>OR
+            <div class="devise-links" >
+              <%= render "devise/shared/links" %>
+            </div>
+            <% end %>
+
+    </div>
+  </div>
+</div>
+
+<body class="firstpage">
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+            <div class="col md-6 my-3 ">
+              <div class="d-inline-flex p-2"></div>
+              <h2> Welcome to <strong> Accounty </strong></h2>
+              <p> <strong> No credit card required </strong></p>
+              <ul>
+                <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure facilis excepturi nulla
+                  cupiditate amet? Optio non a eligendi nulla, corrupti enim autem. Suscipit recusandae iste
+                  veniam ipsum dolores ut aliquid! </li>
+                <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quam. </li>
+                <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis illo atque, similique
+                  reprehenderit pariatur officia. </li>
+                <li> Lorem ipsum dolor sit amet consectetur.</li>
+                <li> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo ipsum vel pariatur!
+                </li>
+              </ul>
+              <div>
+              </div>
+
+
+            </div>
+
+      </div>
+
+
+
+
+</body>

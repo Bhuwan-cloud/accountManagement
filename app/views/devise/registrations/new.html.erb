@@ -1,0 +1,68 @@
+<body class='firstpage'>
+
+  <div class="container">
+    <%= link_to homepages_path do %>
+      <img src="https://www.designevo.com/res/templates/thumb_small/blue-triangle-and-white-arrow.png" alt="logo"
+        width="200" height="200" class="float-end">
+      <% end %>
+        <div class="float-end"></div>
+        <h2> Welcome to <strong> Accounty </strong></h2>
+        <p> <strong> No credit card required </strong></p>
+        <ul>
+          <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure facilis excepturi nulla
+            cupiditate amet? Optio non a eligendi nulla, corrupti enim autem. Suscipit recusandae iste
+            veniam ipsum dolores ut aliquid! </li>
+          <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quam. </li>
+          <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis illo atque, similique
+            reprehenderit pariatur officia. </li>
+          <li> Lorem ipsum dolor sit amet consectetur.</li>
+          <li> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo ipsum vel pariatur!
+          </li>
+        </ul>
+        <div>
+          <div class="row">
+            <div class="register pull-left">
+              <div class="header">
+                <img
+                  src="https://static3.depositphotos.com/1007836/260/i/950/depositphotos_2609396-stock-photo-business-finance-chart-graph-diagram.jpg"
+                  alt="logo" width="350" height="300" class="float-end">
+                <h2>Sign Up</h2>
+
+
+                <span>Register your account.</span>
+              </div>
+
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <%= render "devise/shared/error_messages" , resource: resource %>
+
+                  <div class="field">
+                    <%= f.label :email %><br />
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                  </div>
+
+                  <div class="field">
+                    <%= f.label :password %>
+                      <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                        <% end %><br />
+                          <%= f.password_field :password, autocomplete: "new-password" %>
+                  </div>
+
+                  <div class="field">
+                    <%= f.label :password_confirmation %><br />
+                      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+                  </div><br>
+
+                  <div class="actions">
+                    <%= f.submit "Sign up" , class:"btn btn-primary" %>
+                      <input type="reset" , class="btn btn-primary" , value="Reset">
+                  </div>OR
+                  <div class="devise-links">
+                    <%= render "devise/shared/links" %>
+                  </div>
+                  <% end %>
+
+            </div>
+          </div>
+        </div>
+</body>
