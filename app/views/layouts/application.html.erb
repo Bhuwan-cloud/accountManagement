@@ -10,7 +10,12 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload',:cache => 'cached/all' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload',:cache => 'cached/all' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload',:cache => 'cached/all' %>
-
+  
+  <!-----------for yielding css in dashboard for now (we can yield other files using folowing ) -->
+    <% if content_for?(:head) %>
+    <%= yield(:head) %>
+    <% end %> 
+  <!---------------------------------------------------->
   </head>
 
   <body>
