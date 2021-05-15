@@ -1,0 +1,93 @@
+<!--------for fetching CSS from assets/stylesheets ------>
+<% content_for :head do %>
+     <link rel="stylesheet" href="/assets/dashboard.scss"> 
+<% end %>
+<!---------------------------------------------------------->
+<div class="">
+    
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+        <header>
+            <!-- ======================================Navigation Bar================================================= -->
+            <nav class="navbar navbar-expand-lg navStyle">
+                <%= link_to homepages_path do %>
+                    <div class="brand-navbar" > <h4><strong>  Accounty </strong> </h4> </div>
+                <% end %>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+                    <span><i class="fas fa-align-right iconStyle"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ml-auto navList">
+                        <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-home"></i>HOME<span
+                                    class="sr-only">(current)</span></a></li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link"><i class="fas fa-cogs"></i>Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link"><i class="fas fa-briefcase"></i>Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link"><i class="fas fa-phone"></i>Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link"><i class="fas fa-users"></i>About</a>
+
+                        </li>
+                           <% if current_user %>
+                            <li class="nav-item">
+                                <%= link_to 'Sign out' , destroy_user_session_path, method: :delete, class: 'nav-link'
+                                    %>
+                            </li>
+                            <% end %>
+                    </ul>
+                </div>
+            </nav>
+
+
+        </header>
+
+        <!-----------------side bar ----------------------->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 sidebar1">
+                    <div class="logo">
+                        <img src="https://www.designevo.com/res/templates/thumb_small/blue-triangle-and-white-arrow.png" class="img-responsive center-block" alt="Logo">
+                    </div>
+                    <br>
+                    <div class="left-navigation">
+                        <ul class="list">
+                            <h5><strong>Bhuwan Bhatt</strong></h5>
+                            <%= link_to clients_path do %>
+                            <li> <strong> Clients </strong></li>
+                            <% end %>
+                             <%= link_to teams_path do %>
+                            <li> <strong> Clients </strong></li>
+                            <% end %>
+                   
+                            <div class="menuitems p-2 navbar-header">
+                                <li id="attendance"><%= link_to  clients_path do %> <i class="fas fa-running"></i> <span class="brand-big pl-2">Attendance</span> <% end %></li>
+                            </div>
+                          
+                        </ul>
+    
+                        <br>
+    
+                        <ul class="list">
+                            <h5><strong> Software 👩‍💻</strong></h5>
+                            <li>Hiking</li>
+                            <li>Rafting</li>
+                            <li>Badminton</li>
+                            <li>Tennis</li>
+                            <li>Sketching</li>
+                            <li>Horse Riding</li>
+                            <li>Rafting</li>
+                            <li>Badminton</li>
+                            <li>Tennis</li>
+                            <li>Sketching</li>
+                        </ul>
+                    </div>
+                </div>
+               
+        </div>
+    <div>

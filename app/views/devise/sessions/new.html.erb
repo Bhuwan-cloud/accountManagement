@@ -1,6 +1,6 @@
 <div class="container">
   <div class="col-md-6 my-3 text-center float-end">
-    <%= link_to homepages_index_path do %>
+    <%= link_to homepages_path do %>
       <div class="btn btn-primary btn-lg btn-block btn-huge">Enter to Accounty</div>
       <% end %>
 
@@ -10,7 +10,7 @@
   </div>
             
   <div class="row">
-    <%= link_to homepages_index_path do %>
+    <%= link_to homepages_path do %>
           <img src="https://www.designevo.com/res/templates/thumb_small/blue-triangle-and-white-arrow.png" alt="logo"
             width="150" height="150" class="mt-0">
           <% end %>
@@ -48,7 +48,7 @@
               <%= f.submit "Log in", class: "btn btn-primary" %>
               <input type="reset", class="btn btn-primary", value="Reset">
             </div>OR
-            <div class="devise-links">
+            <div class="devise-links" >
               <%= render "devise/shared/links" %>
             </div>
             <% end %>
