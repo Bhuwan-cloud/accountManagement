@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
   
+  get 'softwares/index'
+  get 'networks/index'
+  get 'networking_items/index'
+  get 'quotations/index'
+  get 'estimates/index'
   resources :inventories
   resources :clients
   resources :teams

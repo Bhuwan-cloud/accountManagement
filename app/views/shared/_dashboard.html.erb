@@ -1,10 +1,11 @@
-<!--------for fetching CSS from assets/stylesheets ------>
 
 <body>
+<!--------for fetching CSS from assets/stylesheets ------>
+
     <% content_for :head do %>
         <link rel="stylesheet" href="/assets/dashboard.scss">
-        <% end %>
-            <!---------------------------------------------------------->
+    <% end %>
+<!---------------------------------------------------------->
             <div class="overflow-auto">
 
                 <head>
@@ -15,7 +16,7 @@
                     <nav class="navbar navbar-expand-lg navStyle">
                         <%= link_to homepages_path do %>
                             <div class="brand-navbar">
-                                <h4><strong> Accounty </strong> </h4>
+                                <h4><strong> Account-MS </strong> </h4>
                             </div>
                             <% end %>
                                 <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
@@ -63,13 +64,14 @@
                             </div>
                             <br>
 <!------------------------------list inside sidebar--------------------------------->
+          <!----------------------list category 1------------->
                             <ul class="list">
                                 <h5><strong>People</strong></h5>
 
                                     <div class="menuitems p-2 navbar-header">
                                         <li id="attendance">
                                             <%= link_to clients_path do %> 
-                                                <span class="brand-big pl-4">Attendance</span>  
+                                                <span class="brand-big pl-4"> <strong> Team Members </strong> </span>  
                                                 <% end %>
                                         </li>
                                     </div>
@@ -77,7 +79,7 @@
                                     <div class="menuitems p-2 navbar-header">
                                         <li id="attendance">
                                             <%= link_to clients_path do %>
-                                                <span class="brand-big pl-4">Attendance</span>   
+                                                <span class="brand-big pl-4"> <strong> Clients </strong> </span>   
                                                 <% end %>
                                         </li>
                                     </div>
@@ -85,7 +87,7 @@
                                     <div class="menuitems p-2 navbar-header">
                                         <li id="attendance">
                                             <%= link_to clients_path do %> 
-                                                <span class="brand-big pl-4">Attendance</span>  
+                                                <span class="brand-big pl-4"> <strong> Board Members </strong> </span>  
                                                 <% end %>
                                         </li>
                                     </div>
@@ -93,40 +95,107 @@
                                     <div class="menuitems p-2 navbar-header">
                                         <li id="attendance">
                                             <%= link_to clients_path do %> 
-                                                <span class="brand-big pl-4"> <strong> Attendance </strong> </span>  
+                                                <span class="brand-big pl-4"> <strong> Students </strong> </span>  
                                                 <% end %>
                                         </li>
                                     </div>
 
-          
+                            </ul>
+
+                            
+                   <!---------------------list category 2--------------------->
+                            
+                             <ul class="list">
+                                <h5><strong>  Billing   </strong></h5>
+
+                                  <div class="menuitems p-2 navbar-header">
+                                        <li id="attendance">
+                                            <%= link_to clients_path do %> 
+                                                <span class="brand-big pl-4"> <strong> Estimates </strong> </span>  
+                                                <% end %>
+                                        </li>
+                                    </div>
+
+                                      <div class="menuitems p-2 navbar-header">
+                                        <li id="attendance">
+                                            <%= link_to clients_path do %> 
+                                                <span class="brand-big pl-4"> <strong> Invoices </strong> </span>  
+                                                <% end %>
+                                        </li>
+                                    </div>
+
+                                      <div class="menuitems p-2 navbar-header">
+                                        <li id="attendance">
+                                            <%= link_to clients_path do %> 
+                                                <span class="brand-big pl-4"> <strong> Quotation  </strong> </span>  
+                                                <% end %>
+                                        </li>
+                                    </div>
+
+                                      <div class="menuitems p-2 navbar-header">
+                                        <li id="attendance">
+                                            <%= link_to clients_path do %> 
+                                                <span class="brand-big pl-4"> <strong> Balance Sheet  </strong> </span>  
+                                                <% end %>
+                                        </li>
+                                    </div>
+                            </ul>
+                <!---------------------list category 3--------------------->
+
+                               <ul class="list">
+                                <h5><strong> Inventory</strong></h5>
+
+                                    <div class="menuitems p-2 navbar-header">
+                                        <li id="attendance">
+                                            <%= link_to clients_path do %> 
+                                                <span class="brand-big pl-4"> <strong> Networking Items </strong> </span>  
+                                                <% end %>
+                                        </li>
+                                    </div>
+
+                                    <div class="menuitems p-2 navbar-header">
+                                        <li id="attendance">
+                                            <%= link_to clients_path do %>
+                                                <span class="brand-big pl-4"> <strong> Softwares Items </strong> </span>   
+                                                <% end %>
+                                        </li>
+                                    </div>
+
+                                    <div class="menuitems p-2 navbar-header">
+                                        <li id="attendance">
+                                            <%= link_to clients_path do %> 
+                                                <span class="brand-big pl-4"> <strong> Tools </strong> </span>  
+                                                <% end %>
+                                        </li>
+                                    </div>
+
 
                             </ul>
 
-                            <br>
+    <!---------------------list category 4--------------------->
 
-                            <ul class="list">
-                                <h5><strong> Software 👩‍💻</strong></h5>
-                                <li>Hiking</li>
-                                <li>Rafting</li>
-                                <li>Badminton</li>
-                                <li>Tennis</li>
-                                <li>Sketching</li>
-                                <li>Horse Riding</li>
-                                <li>Rafting</li>
-                                <li>Badminton</li>
-                                <li>Tennis</li>
-                                <li>Sketching</li>
-                                <li>Sketching</li>
-                                <li>Horse Riding</li>
-                                <li>Rafting</li>
-                                <li>Badminton</li>
-                                <li>Tennis</li>
-                                <li>Sketching</li>
-                                <li>Horse Riding</li>
-                                <li>Rafting</li>
-                                <li>Badminton</li>
-                                <li>Tennis</li>
+                               <ul class="list">
+                                <h5><strong>  Sales </strong></h5>
+
+                                    <div class="menuitems p-2 navbar-header">
+                                        <li id="attendance">
+                                            <%= link_to clients_path do %> 
+                                                <span class="brand-big pl-4"> <strong> Networking  </strong> </span>  
+                                                <% end %>
+                                        </li>
+                                    </div>
+
+                                    <div class="menuitems p-2 navbar-header">
+                                        <li id="attendance">
+                                            <%= link_to clients_path do %>
+                                                <span class="brand-big pl-4"> <strong> Softwares </strong> </span>   
+                                                <% end %>
+                                        </li>
+                                    </div>
+
+
                             </ul>
+
 <!------------------------------------------------------------------------------------>
                         </div>
                     </div>
