@@ -11,8 +11,9 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'pg'
 # gem for rails admin 
 gem 'rails_admin', '~> 2.0'
-#gem for fontawesome icons 
-gem 'font-awesome-rails'
+
+# airbrake monitoring
+gem  'airbrake'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

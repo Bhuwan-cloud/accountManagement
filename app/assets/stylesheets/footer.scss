@@ -1,0 +1,50 @@
+#social:hover {
+  -webkit-transform: scale(1.1);
+}
+#social {
+  -webkit-transform: scale(0.8);
+}
+
+/*    Only Needed in Multi-Coloured Variation 
+                                               */
+.social-fb:hover {
+  color: #95a1b9;
+}
+.social-tw:hover {
+  color: #8096ad;
+}
+.social-gp:hover {
+  color: #d34836;
+}
+.social-em:hover {
+  color: #f39c12;
+}
+.nomargin {
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer-bottom {
+  background-color: #0f272b;
+  min-height: 30px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  padding: 5px;
+}
+.copyright {
+  color: #fff;
+  line-height: 30px;
+  min-height: 30px;
+  padding: 7px 0;
+}
+.design {
+  color: #fff;
+  line-height: 30px;
+  min-height: 30px;
+  padding: 7px 0;
+  text-align: right;
+}
+.design a {
+  color: #fff;
+}
