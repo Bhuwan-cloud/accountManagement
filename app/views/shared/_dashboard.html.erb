@@ -23,6 +23,16 @@
                                 </button>
                                 <div class="collapse navbar-collapse" id="mainMenu">
                                     <ul class="navbar-nav ml-auto navList">
+                                        <!-- <li class="nav-link mx-3">
+                                            <h5><strong>
+                                                    <%= current_user.email.split('@')[0].capitalize %>
+                                                </strong></h5>
+                                        </li> -->
+                                        <li class="nav-item1" style="text-decoration: none;">
+                                            <a href="" class="nav-link mr-4">
+                                                Welcome! <%= current_user.email.split('@')[0].capitalize %>
+                                            </a>
+                                        </li>
                                         <li class="nav-item active"><a href="#" class="nav-link"><i
                                                     class="fas fa-home"></i>HOME<span
                                                     class="sr-only">(current)</span></a>
@@ -62,43 +72,45 @@
                                     class="img-responsive center-block" alt="Logo">
                             </div>
                             <br>
-<!------------------------------list inside sidebar--------------------------------->
+                            <!------------------------------list inside sidebar--------------------------------->
                             <ul class="list">
-                                <h5><strong>People</strong></h5>
 
-                                    <div class="menuitems p-2 navbar-header">
-                                        <li id="attendance">
-                                            <%= link_to clients_path do %> 
-                                                <span class="brand-big pl-4">Attendance</span>  
-                                                <% end %>
-                                        </li>
-                                    </div>
 
-                                    <div class="menuitems p-2 navbar-header">
-                                        <li id="attendance">
-                                            <%= link_to clients_path do %>
-                                                <span class="brand-big pl-4">Attendance</span>   
-                                                <% end %>
-                                        </li>
-                                    </div>
 
-                                    <div class="menuitems p-2 navbar-header">
-                                        <li id="attendance">
-                                            <%= link_to clients_path do %> 
-                                                <span class="brand-big pl-4">Attendance</span>  
-                                                <% end %>
-                                        </li>
-                                    </div>
 
-                                    <div class="menuitems p-2 navbar-header">
-                                        <li id="attendance">
-                                            <%= link_to clients_path do %> 
-                                                <span class="brand-big pl-4"> <strong> Attendance </strong> </span>  
-                                                <% end %>
-                                        </li>
-                                    </div>
+                                <div class="menuitems p-2 navbar-header">
+                                    <li id="attendance">
+                                        <%= link_to clients_path do %>
+                                            <span class="brand-big pl-4">Attendance</span>
+                                            <% end %>
+                                    </li>
+                                </div>
 
-          
+                                <div class="menuitems p-2 navbar-header">
+                                    <li id="attendance">
+                                        <%= link_to clients_path do %>
+                                            <span class="brand-big pl-4">Attendance</span>
+                                            <% end %>
+                                    </li>
+                                </div>
+
+                                <div class="menuitems p-2 navbar-header">
+                                    <li id="attendance">
+                                        <%= link_to clients_path do %>
+                                            <span class="brand-big pl-4">Attendance</span>
+                                            <% end %>
+                                    </li>
+                                </div>
+
+                                <div class="menuitems p-2 navbar-header">
+                                    <li id="attendance">
+                                        <%= link_to clients_path do %>
+                                            <span class="brand-big pl-4"> <strong> Attendance </strong> </span>
+                                            <% end %>
+                                    </li>
+                                </div>
+
+
 
                             </ul>
 
@@ -127,13 +139,14 @@
                                 <li>Badminton</li>
                                 <li>Tennis</li>
                             </ul>
-<!------------------------------------------------------------------------------------>
+                            <!------------------------------------------------------------------------------------>
                         </div>
                     </div>
                 </div>
 
             </div>
             <div>
+
 
 
 
