@@ -18,12 +18,22 @@
                             <div class="brand-navbar">
                                 <h4><strong> Account-MS </strong> </h4>
                             </div>
-                            <% end %>
+                        <% end %>
                                 <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
                                     <span><i class="fas fa-align-right iconStyle"></i></span>
                                 </button>
                                 <div class="collapse navbar-collapse" id="mainMenu">
                                     <ul class="navbar-nav ml-auto navList">
+                                        <!-- <li class="nav-link mx-3">
+                                            <h5><strong>
+                                                    <%= current_user.email.split('@')[0].capitalize %>
+                                                </strong></h5>
+                                        </li> -->
+                                        <li class="nav-item1" style="text-decoration: none;">
+                                            <a href="" class="nav-link mr-5">
+                                                Welcome! <%= current_user.email.split('@')[0].capitalize %>
+                                            </a>
+                                        </li>
                                         <li class="nav-item active"><a href="#" class="nav-link"><i
                                                     class="fas fa-home"></i>HOME<span
                                                     class="sr-only">(current)</span></a>
@@ -66,7 +76,6 @@
 <!------------------------------list inside sidebar--------------------------------->
           <!----------------------list category 1------------->
                             <ul class="list">
-                                <h5><strong>People</strong></h5>
 
                                     <div class="menuitems p-2 navbar-header">
                                         <li id="attendance">
@@ -131,6 +140,8 @@
                                                 <% end %>
                                         </li>
                                     </div>
+
+
 
                                       <div class="menuitems p-2 navbar-header">
                                         <li id="attendance">
@@ -197,12 +208,14 @@
                             </ul>
 
 <!------------------------------------------------------------------------------------>
+                            <!------------------------------------------------------------------------------------>
                         </div>
                     </div>
                 </div>
 
             </div>
             <div>
+
 
 
 
