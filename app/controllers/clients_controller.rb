@@ -3,17 +3,20 @@ class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy ]
 
   def index
-    @client=Client.all
+    @client = Client.all
   end
+
+  def show 
+    @client = Client.find(params[:id]) 
+   
+  end 
 
   def new
     @client=Client.new
-
-end
+  end
 
 def create
     @client = Client.create(client_params)
-
       if @client.save
         redirect_to clients_path
       else

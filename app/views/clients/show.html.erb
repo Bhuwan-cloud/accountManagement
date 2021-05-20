@@ -1,0 +1,95 @@
+<div class="container search-table">
+    <div class="search-box">
+        <div class="row">
+             
+             <!-------------name of client ------------------>
+                <div class="col text-center">
+                    <h4> <%= @client.name %> </h4>
+    
+                    <!------address ----------------->
+                    <p> <strong> <%= @client.address %> </strong>
+                    <p>
+                </div>
+        </div>
+    </div>
+    <div class="search-list">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> Project Name </th>
+                    <th> Team Members </th>
+                    <th> Started Date </th>
+                    <th> Completed Date </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        <div class="myDiv" style="width:400px;">
+                            <!-------------------------------main project name ---------------------->
+                            <p class="font-monospace mx-2 my-2"> <strong> <%= @client.project %>   </strong></p>
+                            <!----------subtasks------------>
+                                <ul>
+                                    <li> SM Installation</li> 
+                                    <li> AP Installation</li>
+                                    <li> Firewall Configuration </li>
+                                </ul>
+                            <!----------------------------->
+                        </div>
+                    </td>
+                    <td>
+                        <!---------------members--------------------->
+                        <div class="myDiv" style="width:300px;">
+                            <span class="badge bg-dark"> Bhuwan Bhatt </span>
+                            <span class="badge bg-dark"> Bishisth Bhatt </span>
+                            <span class="badge bg-dark"> Rabin Nath  </span>
+                            <span class="badge bg-dark"> Parixit Rokaya  </span>
+                            <span class="badge bg-dark"> Bhoj Sigh Karki  </span>
+                        </div>
+                    </td>
+
+                    <td>
+                        <!---------------------start date ---------------->
+                        <div class="myDiv" style="width:150px;">
+                            <span class="badge bg-primary"> 2077 / Magh /3 </span>
+                        </div>
+                    </td>
+
+                    <td>
+                        <!-------------completed date -------------------->
+                        <div class="myDiv" style="width:150px;">
+                            <span class="badge bg-success"> 2077 / Magh / 10 </span>
+                        </div>
+                    </td>
+
+                    <td>
+                                
+                    <!------------button for bill's dropdown --------->
+                   
+                    <button onclick="myFunction()"> Show the Bills </button>
+                    <div id="bill"> 
+                      lorem ipsum  <!--put your bills here -->
+                    </div>
+                    <!-------javascript for show hide effect ----->
+                    <script>
+                        function myFunction() {
+                            var x = document.getElementById("bill");
+                            if(x.style.display === "none")
+                            {
+                                x.style.display = "";
+                            }
+                            else {
+                                x.style.display = "none";
+                            }
+                        }
+                    </script>
+                    <!------------------------------------------------>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
