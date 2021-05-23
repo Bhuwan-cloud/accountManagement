@@ -1,3 +1,14 @@
-<h1>Estimates#index</h1>
-<p>Find me in app/views/estimates/index.html.erb</p>
+<%= render partial: "shared/dashboard" %>
 
+    <div style="position:absolute; overflow-y:auto; top:0; height:120%; width: 82.5%; margin: 80px 220px;">
+
+        <div class="container">
+            <!-- Main content starts here -->
+
+            <%= render 'shared/estimates/estimates' %>
+
+                <!-- Main content ends here -->
+        </div>
+
+    </div>
+    <%= render 'shared/footer' %>

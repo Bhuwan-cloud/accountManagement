@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'networks/index'
   get 'networking_items/index'
   get 'quotations/index'
-  get 'estimates/index'
+  # get 'estimates/index'
+  resources :estimates
   resources :inventories
   resources :clients
   resources :teams
