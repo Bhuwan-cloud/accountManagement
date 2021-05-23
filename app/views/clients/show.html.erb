@@ -20,7 +20,11 @@
                             <%= @client.address %>
                         </strong>
                     <p>
+                  
                 </div>
+                    <%= link_to new_client_path(category:"project") do %>
+                    <div class="btn btn-secondary"><b>+</b> Add new Project Details </div>
+                    <% end %>
             </div>
         </div>
         <div class="search-list">
@@ -105,6 +109,9 @@
                                             $("#bill").print();
                                         });
                                     </script>
+                                        <%= link_to new_client_path(category:"estimate") do %>
+                                             <button> add bills </button>
+                                        <% end %>     
 
                             </div>
                             <!-------javascript for show hide effect ----->
