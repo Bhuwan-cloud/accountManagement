@@ -1,12 +1,17 @@
 <%= render partial: "shared/dashboard" %>
+    <% type=params[:category]%>  
 
        <div style="position:absolute; overflow-y:auto; top:0; height:120%; width: 82.5%; margin: 80px 220px; ">
         
         <div class="container">
-        <!-- Main content starts here -->
-
-            <%= render partial:"form" %>
-
+             <!-- Main content starts here -->
+            <% if type=="client"%>
+            <%= render partial: 'form_client' %>
+            <% elsif type=="project" %>
+            <%= render partial: 'form_project'%>
+            <% elsif type=="estimate"%>
+            <%= render partial: 'form_estimate'%>
+            <% end %>
             <!-- Main content ends here -->
         </div>
             
