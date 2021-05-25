@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   get 'softwares/index'
   get 'networks/index'
   get 'networking_items/index'
-  get 'quotations/index'
+  #get 'quotations/index'
   # get 'estimates/index'
+  resources :quotations
   resources :estimates
   resources :inventories
   resources :clients

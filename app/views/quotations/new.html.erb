@@ -1,5 +1,5 @@
 <body>
-    <title>New Bill</title>
+    <title>New Quotation</title>
 
     <%= render partial: "shared/dashboard" %>
         <% type=params[:category]%>
@@ -8,8 +8,8 @@
 
                 <div class="container">
                     <!-- Main content starts here -->
-                         <% if type=="new_estimate"%>
-                        <%= render partial: 'form_new_estimate' %>
+                         <% if type=="new_quotation"%>
+                        <%= render partial: 'form_new_quotation' %>
                         <% elsif type=="project" %>
                         <%= render partial: ''%>
                         <% end %>

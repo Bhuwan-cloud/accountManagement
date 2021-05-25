@@ -1,0 +1,112 @@
+<body>
+
+    <!------------------------salutation  ------------------------------------------>
+    <div class="container border">
+                <div class="row">
+                    <div class="col-12">
+                         <div class="my-3 mx-3"> <input class="btn btn-secondary" value="Print Quotation" > </div>
+                        <div class="row p-5">
+                            <div class="col-md-6 text-center">
+                                <div class="d-flex flex-row bd-highlight mb-3 text-center" style="height: 45px;">
+                                    <div class="p-2 bd-highlight">
+                                        <h1 class=""> <strong> NARMADA </strong> </h1> 
+                                    </div>
+                                    <div class="p-2 bd-highlight">
+                                    <h1 class="text-danger"> <strong> INFOSYS</strong> </h1>
+                                    </div>
+                                </div>
+                                <p class="mb-1"> <h4> <strong> "Complete IT Solutions" </strong>  </h4></p>
+                                <p class="mb-1"> Aithpur-6 , Bhimdattnagar</p>
+                                <p class="mb-1"> Kanchanpur , Nepal</p>
+                                <p class="mb-1">  099-402068 , 9805769058  </p>
+                            </div>
+                    
+                               <div class="col-md-6 text-right">
+                                    <p class="font-weight-bold mb-1"> Quote No: <%= @quotation.bill_number %> </p>
+                                    <p > Date :  <%= @quotation.date %> </p>
+                                </div>
+                        </div>
+                      
+                                        <hr >
+
+                                        <p class="text-center font-weight-bold">   Subject of Quotation : <u> <%= @quotation.subject %> </u> </p>
+
+                                        <div class="row pb-5 p-5">
+                                            <div class="col-md-6">
+                                                <p class="font-weight-bold mb-4">Client Information </p>
+                                                <p class="mb-1 font-italic"> <%= @quotation.client_name %> , <%= @quotation.client_designation %>  </p>
+                                                <p class="mb-1"> <%= @quotation.office_name %> </p>
+                                                <p class="mb-1"> <%= @quotation.client_address %></p>
+                                                <p class="mb-1"> <%= @quotation.client_phone %></p>
+                                            </div>
+
+                                            <div class="col-md-6 text-right">
+                                                <p class="font-weight-bold mb-4">Payment Details</p>
+                                                <p class="mb-1"><span class="text-muted" >VAT NO: </span> <%= @quotation.vat_no %> </p>
+                                                <p class="mb-1"><span class="text-muted">Payment Type: </span> <%= @quotation.payment_type %> </p>
+                                                <p class="mb-1"><span class="text-muted"> Adminstrator Name: </span> <%= @quotation.admin_name %> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <!-------------------------------invoice form ----------------------------------------->
+                            <div class="container">
+                            <div class="row clearfix">
+                                <div class="col-md-12">
+                                <table class="table table-bordered table-hover" id="tab_logic">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center"> SN </th>
+                                        <th class="text-center"> Item </th>
+                                        <th class="text-center"> Qty </th>
+                                        <th class="text-center"> Price </th>
+                                        <th class="text-center"> Total </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr id='addr0'>
+                                        <td>1</td>
+                                        <td><%= @quotation.description %></td>
+                                        <td><%= @quotation.quantity  %></td>
+                                        <td><%= @quotation.rate %></td>
+                                        <td><%= @quotation.total %></td>
+                                    </tr>
+                                    <tr id='addr1'></tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                            <div class="row clearfix" style="margin-top:20px">
+                                <div class=" col-md-4" style="margin-left:40em">
+                                <table class="table table-bordered table-hover" id="tab_logic_total">
+                                    <tbody>
+                                    <tr>
+                                        <th class="text-center">Sub Total</th>
+                                        <td class="text-center"><%= @quotation.sub_total %></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">Tax</th>
+                                        <td class="text-center"><div class="input-group mb-2 mb-sm-0">
+                                            <%= @quotation.tax %>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">Tax Amount</th>
+                                        <td class="text-center"><%= @quotation.tax_amount %></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">Grand Total</th>
+                                        <td class="text-center"><%= @quotation.grand_total %></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                            </div>
+                    <% end %>
+
+    </div>
+
+    <!-------------------------------------------------------------------------------------->
+</body>
