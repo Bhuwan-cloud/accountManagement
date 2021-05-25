@@ -1,0 +1,175 @@
+<body>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!------------------------salutation  ------------------------------------------>
+    <div class="container border">
+                <div class="row">
+                    <div class="col-12">
+                    <%= form_for @estimate do |f| %>
+                         <div class="my-3 mx-3"> <%= f.submit class:"btn btn-secondary", value:"Save Quotation" %> </div>
+
+                        <div class="row p-5">
+                            <div class="col-md-6 text-center">
+                                <div class="d-flex flex-row bd-highlight mb-3 text-center" style="height: 45px;">
+                                    <div class="p-2 bd-highlight">
+                                        <h1 class=""> <strong> NARMADA </strong> </h1> 
+                                    </div>
+                                    <div class="p-2 bd-highlight">
+                                    <h1 class="text-danger"> <strong> INFOSYS</strong> </h1>
+                                    </div>
+                                </div>
+                                <p class="mb-1"> <h4> <strong> "Complete IT Solutions" </strong>  </h4></p>
+                                <p class="mb-1"> Aithpur-6 , Bhimdattnagar</p>
+                                <p class="mb-1"> Kanchanpur , Nepal</p>
+                                <p class="mb-1">  099-402068 , 9805769058  </p>
+                            </div>
+                    
+                               <div class="col-md-6 text-right">
+                                    <p class="font-weight-bold mb-1"> Quote No: <%= f.number_field :bill_number, style:"width:5em", required: true %> </p>
+                                    <p > Date :  <%= f.text_field :date, style:"width:7em", required: true %> </p>
+                                </div>
+                        </div>
+                      
+                                        <hr >
+
+                                        <p class="text-center font-weight-bold">   Subject of Quotation : <u> <%= f.text_field :subject, style:"width:25em", required: true %> </u> </p>
+
+                                        <div class="row pb-5 p-5">
+                                            <div class="col-md-6">
+                                                <p class="font-weight-bold mb-4">Client Information </p>
+                                                <p class="mb-1 font-italic"> <%= f.text_field :client_name, style:"width:15em", placeholder: "Client Name" %> , <%= f.text_field :client_designation, style:"width:10em", placeholder: "Client Designation" %>  </p>
+                                                <p class="mb-1"> <%= f.text_field :office_name, style:"width:20em", placeholder: "Client Office Name" %> </p>
+                                                <p class="mb-1"> <%= f.text_field :client_address, style:"width:18em", placeholder: "Client Address" %></p>
+                                                <p class="mb-1"> <%= f.text_field :client_phone, style:"width:12em", placeholder: "Client Phone" %></p>
+                                            </div>
+
+                                            <div class="col-md-6 text-right">
+                                                <p class="font-weight-bold mb-4">Payment Details</p>
+                                                <p class="mb-1"><span class="text-muted" >VAT NO: </span> <%= f.number_field :vat_no, style:"width:8em" %> </p>
+                                                <p class="mb-1"><span class="text-muted">Payment Type: </span> <%= f.text_field :payment_type, style:"width:6em" %> </p>
+                                                <p class="mb-1"><span class="text-muted"> Adminstrator Name: </span> <%= f.text_field :admin_name, style:"width:11em" %> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <!-------------------------------invoice form ----------------------------------------->
+                            <div class="container">
+                            <div class="row clearfix">
+                                <div class="col-md-12">
+                                <table class="table table-bordered table-hover" id="tab_logic">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center"> SN </th>
+                                        <th class="text-center"> Item </th>
+                                        <th class="text-center"> Qty </th>
+                                        <th class="text-center"> Price </th>
+                                        <th class="text-center"> Total </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr id='addr0'>
+                                        <td>1</td>
+                                        <td><%= f.text_field :description, name:'product[]',  placeholder:'Enter Product Name', class:"form-control", required: true %></td>
+                                        <td><%= f.number_field :quantity,  name:'qty[]', placeholder:'Enter Qty', class:"form-control qty", step:"0", min:"0", required: true %></td>
+                                        <td><%= f.number_field :rate, name:'price[]', placeholder:'Enter Unit Price', class:"form-control price", step:"0.00", min:"0", required: true %></td>
+                                        <td><%= f.number_field :total, name:'total[]', placeholder:'0.00', class:"form-control total", readonly: true, required: true %></td>
+                                    </tr>
+                                    <tr id='addr1'></tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-12">
+                                <button id="add_row" class="btn btn-default pull-left">Add Row</button>
+                                <button id='delete_row' class="pull-right btn btn-default">Delete Row</button>
+                                </div>
+                            </div>
+                            <div class="row clearfix" style="margin-top:20px">
+                                <div class=" col-md-4" style="margin-left:46em; ">
+                                <table class="table table-bordered table-hover" id="tab_logic_total">
+                                    <tbody>
+                                    <tr>
+                                        <th class="text-center">Sub Total</th>
+                                        <td class="text-center"><%= f.number_field :sub_total, name:'sub_total', placeholder:'0.00', class:"form-control", id:"sub_total", readonly: true %></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">Tax</th>
+                                        <td class="text-center"><div class="input-group mb-2 mb-sm-0">
+                                            <%= f.number_field :tax, class:"form-control", id:"tax", placeholder:"0 %" %>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">Tax Amount</th>
+                                        <td class="text-center"><%= f.number_field :tax_amount, name:'tax_amount', id:"tax_amount", placeholder:'0.00', class:"form-control", readonly: true %></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">Grand Total</th>
+                                        <td class="text-center"><%= f.number_field :grand_total, name:'total_amount', id:"total_amount", placeholder:'0.00', class:"form-control", readonly: true %></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                            </div>
+                    <% end %>
+
+            <!-------javascript(jQuery) for form manipulation -------------------------------->
+            <script>
+                $(document).ready(function(){
+                    var i=1;
+                    $("#add_row").click(function(){b=i-1;
+                        $('#addr'+i).html($('#addr'+b).html()).find('td:first-child').html(i+1);
+                         $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+                        i++; 
+                    });
+                    $("#delete_row").click(function(){
+                        if(i>1){
+                        $("#addr"+(i-1)).html('');
+                        i--;
+                        }
+                        calc();
+                    });
+                    
+                    $('#tab_logic tbody').on('keyup change',function(){
+                        calc();
+                    });
+                    $('#tax').on('keyup change',function(){
+                        calc_total();
+                    });
+                });
+
+                function calc()
+                {
+                    $('#tab_logic tbody tr').each(function(i, element) {
+                        var html = $(this).html();
+                        if(html!='')
+                        {
+                            var qty = $(this).find('.qty').val();
+                            var price = $(this).find('.price').val();
+                            $(this).find('.total').val(qty*price);
+                            
+                            calc_total();
+                        }
+                    });
+                }
+
+                function calc_total()
+                {
+                    total=0;
+                    $('.total').each(function() {
+                        total += parseInt($(this).val());
+                    });
+                    $('#sub_total').val(total.toFixed(2));
+                    tax_sum=total/100*$('#tax').val();
+                    $('#tax_amount').val(tax_sum.toFixed(2));
+                    $('#total_amount').val((tax_sum+total).toFixed(2));
+                } 
+
+            </script>
+
+    </div>
+
+    <!-------------------------------------------------------------------------------------->
+</body>
