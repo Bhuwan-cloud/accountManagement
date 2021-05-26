@@ -1,0 +1,47 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bill: MyString
+  description: MyString
+  quantity: MyString
+  rate: MyString
+  total: MyString
+  bill_number: MyString
+  date: MyString
+  sn: MyString
+  subject: MyString
+  sub_total: MyString
+  tax: MyString
+  tax_amount: MyString
+  grand_total: MyString
+  client_name: MyString
+  office_name: MyString
+  client_address: MyString
+  client_phone: MyString
+  client_designation: MyString
+  admin_name: MyString
+  vat_no: MyString
+  payment_type: MyString
+
+two:
+  bill: MyString
+  description: MyString
+  quantity: MyString
+  rate: MyString
+  total: MyString
+  bill_number: MyString
+  date: MyString
+  sn: MyString
+  subject: MyString
+  sub_total: MyString
+  tax: MyString
+  tax_amount: MyString
+  grand_total: MyString
+  client_name: MyString
+  office_name: MyString
+  client_address: MyString
+  client_phone: MyString
+  client_designation: MyString
+  admin_name: MyString
+  vat_no: MyString
+  payment_type: MyString

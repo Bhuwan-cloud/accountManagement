@@ -43,6 +43,7 @@ class QuotationsController < ApplicationController
   end
 
   def quotation_params
-    params.require(:quotation).permit(:sn, :bill_number, :date, :rate, :quantity, :description, :total, :subject)
+    params.require(:quotation).permit(:sn, :bill_number, :date, :rate, :quantity, :description, :total, :subject, 
+      :client_name, :client_address, :client_designation, :vat_no, :payment_type, :admin_name, :office_name, :client_phone)
   end
 end

@@ -1,0 +1,22 @@
+<body>
+    <title>New Invoice</title>
+
+    <%= render partial: "shared/dashboard" %>
+        <% type=params[:category]%>
+
+            <div style="position:absolute; overflow-y:auto; top:0; height:120%; width: 82.5%; margin: 80px 220px; ">
+
+                <div class="container">
+                    <!-- Main content starts here -->
+                         <% if type=="new_invoice"%>
+                        <%= render partial: 'form_new_invoice' %>
+                        <% elsif type=="project" %>
+                        <%= render partial: ''%>
+                        <% end %>
+
+                    <!-- Main content ends here -->
+                </div>
+
+            </div>
+            <%= render 'shared/footer' %>
+</body>
